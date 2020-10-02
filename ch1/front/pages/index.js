@@ -8,10 +8,10 @@ const Home = () => {
         <>
             <Head>
                 <title>SNS</title>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.18.1/antd.css" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.18.1/antd.css"/>
             </Head>
             <AppLayout>
-                <Link href="/about"><a>About</a></Link>
+
                 <div>Hello, Next</div>
             </AppLayout>
         </>
