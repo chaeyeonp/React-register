@@ -11,10 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ant-design/colors": "^4.0.5",
     "antd": "^4.6.6",
     "next": "^9.5.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.8.6"
   },
   "devDependencies": {
     "eslint-plugin-import": "^2.22.1",

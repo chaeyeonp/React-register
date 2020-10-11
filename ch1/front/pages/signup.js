@@ -1,78 +1,105 @@
-import React, {useState} from 'react';
+import React, { useState, useCallback } from 'react';
 import AppLayout from "../components/AppLayout";
 import Head from "next/head";
-import {Form, Input, Checkbox,Button} from 'antd';
+import { Form, Input, Checkbox, Button } from 'antd';
 
 const Signup = () => {
 
-    const [id,setId] = useState('');
-    const [nick,setNick] = useState('');
-    const [password,setPassword] = useState('');
-    const [passwordCheck,setPasswordCheck] = useState('');
-    const [term,setTerm] = useState('');
+    const [passwordCheck, setPasswordCheck] = useState('');
+    const [term, setTerm] = useState(false);
+    const [passwordError, setPasswordError] = useState(false);
+    const [termError, setTermError] = useState(false);
 
-    const onSubmit = () => {
-        setId(e.target.value);
-    };
-    const onChangeId = () => {
-        setId(e.target.value);
-    };
-    const onChangeNick = () => {
-        setNick(e.target.value);
-    };
-    const onChangePassword = () => {
-        setPassword(e.target.value);
-    };
-    const onChangePasswordChk = () => {
+    const useInput = (initValue = null) => {
+        const [value,setter] = useState(initValue);
+        const handler = useCallback((e) => {
+            setter(e.target.value);
+        },[]);
+        return [value,handler];
+    }
+
+    const [id, onChangeId] = useInput('');
+    const [nick, onChangeNick] = useInput('');
+    const [password, onChangePassword] = useInput('');
+
+    const onFinish= useCallback(
+        ()=> {
+        if (password !== passwordCheck) {
+            return setPasswordError(true);
+        }
+        if (!term) {
+            return setTermError(true);
+        }
+        console.log({
+            id,
+            nick,
+            password,
+            passwordCheck,
+            term,
+        });
+    },
+    [password,passwordCheck,term]
+);
+
+
+
+    const onChangePasswordChk = (e) => {
+        setPasswordError(e.target.value !== password);
         setPasswordCheck(e.target.value);
     };
-    const onChangeTerm = () => {
-        setTerm(e.target.value);
+
+    const onChangeTerm = (e) => {
+        setTermError(false);
+        setTerm(e.target.checked);
     };
 
-    return <>
-        <Head>
-            <title>SNS</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.18.1/antd.css"/>
-        </Head>
-        <AppLayout>
-            <Form onSubmit = {onSubmit} style = {{padding:10}}>
-                <div>
-                    <label htmlFor="user-id">아이디</label>
-                    <br/>
-                    <Input name = "user-id" value = {id} required onChange = {onChangeId}/>
-                </div>
-                <div>
-                    <label htmlFor="user-nick">아이디</label>
-                    <br/>
-                    <Input name = "user-nick" value = {nick} required onChange = {onChangeNick}/>
-                </div>
-                <div>
-                    <label htmlFor="user-pass">비밀번호</label>
-                    <br/>
-                    <Input name = "user-pass" value = {password} required onChange = {onChangePassword}/>
-                </div>
-
-                <div>
-                    <label htmlFor="user-pass-chk">아이디</label>
-                    <br/>
-                    <Input name = "user-pass-chk" value = {passwordCheck} required onChange = {onChangePasswordChk}/>
-                </div>
-
-                <div>
-                    <Checkbox name="user-term" value={term} onChange={onChangeTerm}>
-                        약관에 동의합니다.
-                    </Checkbox>
-                </div>
-
-                <div>
-                    <Button type = "primary" htmlType = "submit">가입하기</Button>
-                </div>
-
-
-            </Form>
-        </AppLayout>
-    </>
+    return (
+        <>
+            <Head>
+                <title>SNS</title>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.16.2/antd.css" />
+            </Head>
+            <AppLayout>
+                <Form onFinish={onFinish} style={{ padding: 10 }}>
+                    <Form.Item
+                        label={"아이디"}
+                        name={"user-id"}
+                        rules={[{ required: true, message: "Please input your user ID!"}]}
+                    >
+                        <Input name="user-id" value={id} required onChange={onChangeId} />
+                    </Form.Item>
+                    <Form.Item
+                        label={"닉네임"}
+                        name={"user-nick"}
+                        rules={[{ required: true, message: "Please input your nickname!"}]}
+                    >
+                        <Input name="user-nick" value={nick} required onChange={onChangeNick} />
+                    </Form.Item>
+                    <Form.Item
+                        label={"비밀번호"}
+                        name={"user-password"}
+                        rules={[{ required: true, message: "Please input your password!"}]}
+                    >
+                        <Input name="user-password" type={"password"} value={password} required onChange={onChangePassword} />
+                    </Form.Item>
+                    <Form.Item
+                        label={"비밀번호 체크"}
+                        name={"user-password-check"}
+                    >
+                        <Input name="user-password-check" type={"password"} value={passwordCheck} required onChange={onChangePasswordChk} />
+                        {passwordError && <div style={{ color: 'red' }}>비밀번호가 일치하지 않습니다.</div>}
+                    </Form.Item>
+                    <Form.Item name={"user-term"}>
+                        <Checkbox name={"user-term"} checked={term} onChange={onChangeTerm}>서비스 이용 동의</Checkbox>
+                        {termError && <div style={{ color: 'red' }}>약관에 동의하셔야 합니다.</div>}
+                    </Form.Item>
+                    <Form.Item>
+                        <Button type="primary" htmlType="submit">가입하기</Button>
+                    </Form.Item>
+                </Form>
+            </AppLayout>
+        </>
+    );
 };
 
 export default Signup;
