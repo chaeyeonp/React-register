@@ -21,9 +21,9 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 ![Generic badge](https://img.shields.io/badge/framework-Next-green.svg)
 ![Generic badge](https://img.shields.io/badge/framework-Express-green.svg)
 ![Generic badge](https://img.shields.io/badge/language-JavaScript-important.svg)
-<br>
+<br><br>
 
-### NPM version
+### 📕 NPM version
 | 패키지명 | 버전 | 설명 |
 | -------- | ---- | ---- |
 | React |[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)| 팀용 API 문서 및 디자인 도구 |
