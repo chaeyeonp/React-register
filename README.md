@@ -50,7 +50,7 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 - Hook들과 일반 함수, 값을 조합해서 새로운 Hook 추가
 
 <details>
-<summary>- 변경 사항</summary>
+<summary>💻 변경 사항</summary>
 <div markdown="1">
 
 <img width="584" alt="스크린샷 2020-10-11 오후 5 49 20" src="https://user-images.githubusercontent.com/61309080/95674318-51f20380-0bea-11eb-9d63-fd61f22a36db.png">
