@@ -18,6 +18,7 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 ![Generic badge](https://img.shields.io/badge/library-React-blue.svg)
 ![Generic badge](https://img.shields.io/badge/library-Redux-blue.svg)
 ![Generic badge](https://img.shields.io/badge/library-ReduxSaga-blue.svg)
+![Generic badge](https://img.shields.io/badge/library-Antd-blue.svg)
 ![Generic badge](https://img.shields.io/badge/framework-Next-green.svg)
 ![Generic badge](https://img.shields.io/badge/framework-Express-green.svg)
 ![Generic badge](https://img.shields.io/badge/language-JavaScript-important.svg)
@@ -26,12 +27,12 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 ### 📕 NPM version
 | 패키지명 | 버전 | 설명 |
 | -------- | ---- | ---- |
-| React |[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)| 팀용 API 문서 및 디자인 도구 |
-| Redux | [![npm version](https://img.shields.io/npm/v/redux.svg?style=flat-square)](https://www.npmjs.com/package/redux)| 단위 테스트 프레임 워크 |
-| Redux Saga | [![npm version](https://img.shields.io/npm/v/redux-saga.svg)](https://www.npmjs.com/package/redux-saga)| 모델 데이터 객체 최소화 |
-| Next.js |[![NPM version](https://img.shields.io/npm/v/next.svg)](https://www.npmjs.com/package/next) | 문자메세지 자동 전송 |
-| Express.js|  [![NPM Version](https://img.shields.io/npm/v/express.svg)](https://npmjs.org/package/express)| 오라클 데이터베이스 |
-| Antd Design | [![NPM Version](http://img.shields.io/npm/v/antd.svg?style=flat-square)](http://npmjs.org/package/antd)| 웹 어플리케이션 서버 |
+| React |[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)| 유저 인터페이스 제작을 위한 프론트엔드 라이브러리 |
+| Redux | [![npm version](https://img.shields.io/npm/v/redux.svg?style=flat-square)](https://www.npmjs.com/package/redux)| 상태관리 라이브러리(data value, event loop) |
+| Redux Saga | [![npm version](https://img.shields.io/npm/v/redux-saga.svg)](https://www.npmjs.com/package/redux-saga)| 비동기 동작 관리 라이브러리 |
+| Next.js |[![NPM version](https://img.shields.io/npm/v/next.svg)](https://www.npmjs.com/package/next) | SSR(Server Side Rendering) 구현 프레임워크 |
+| Express.js|  [![NPM Version](https://img.shields.io/npm/v/express.svg)](https://npmjs.org/package/express)| Node.js 의 프레임워크 |
+| Antd Design | [![NPM Version](http://img.shields.io/npm/v/antd.svg?style=flat-square)](http://npmjs.org/package/antd)| React UI 디자인 라이브러리 |
 <br>
 
 ## 📜 Data Model Diagram
