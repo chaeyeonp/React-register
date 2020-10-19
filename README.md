@@ -67,7 +67,7 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 <details>
 <summary>💻 변경 사항</summary>
 <div markdown="1">
-<img width="912" alt="_app.js" src="https://user-images.githubusercontent.com/61309080/96392873-5759da00-11f8-11eb-96d8-fea47384a54b.png">
+<img width="893" alt="_app.js" src="https://user-images.githubusercontent.com/61309080/96393667-cafce680-11fa-11eb-972f-15a21c4a6f37.png">
 
 
 
