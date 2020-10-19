@@ -75,4 +75,16 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 </div>
 </details>
 
+## 🔎 Structure - 변경사항 2020-10-19
+- "_document.js" -> html, head, body
+- "_app.js" -> root
+- pages -> 실제 컴포넌트
+- "_error.js"
+
+
+
+</div>
+</details>
+
+
 
