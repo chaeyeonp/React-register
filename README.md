@@ -58,3 +58,20 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 
 </div>
 </details>
+
+## 🔎 Minimalize Code - 변경사항 2020-10-19
+- Minimalize pages components with "_app.js"
+- Pages에서 겹치는 부분 모두 "_app.js"에 넣기
+- props로 넘겨주는 함수는 useCallback 필수
+
+<details>
+<summary>💻 변경 사항</summary>
+<div markdown="1">
+<img width="893" alt="_app.js" src="https://user-images.githubusercontent.com/61309080/96393667-cafce680-11fa-11eb-972f-15a21c4a6f37.png">
+
+
+
+</div>
+</details>
+
+
