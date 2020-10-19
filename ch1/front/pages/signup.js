@@ -55,11 +55,6 @@ const Signup = () => {
 
     return (
         <>
-            <Head>
-                <title>SNS</title>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.16.2/antd.css" />
-            </Head>
-            <AppLayout>
                 <Form onFinish={onFinish} style={{ padding: 10 }}>
                     <Form.Item
                         label={"아이디"}
@@ -97,7 +92,7 @@ const Signup = () => {
                         <Button type="primary" htmlType="submit">가입하기</Button>
                     </Form.Item>
                 </Form>
-            </AppLayout>
+
         </>
     );
 };
