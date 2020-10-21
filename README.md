@@ -63,6 +63,7 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 - Minimalize pages components with "_app.js"
 - Pages에서 겹치는 부분 모두 "_app.js"에 넣기
 - props로 넘겨주는 함수는 useCallback 필수
+- Proptypes - 전달받은 props가 원하는 props인지를 확인
 
 <details>
 <summary>💻 변경 사항</summary>
@@ -73,5 +74,17 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 
 </div>
 </details>
+
+## 🔎 Structure - 변경사항 2020-10-19
+- "_document.js" -> html, head, body
+- "_app.js" -> root
+- pages -> 실제 컴포넌트
+- "_error.js"
+
+
+
+</div>
+</details>
+
 
 
