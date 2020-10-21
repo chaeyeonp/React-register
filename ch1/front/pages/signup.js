@@ -3,6 +3,14 @@ import AppLayout from "../components/AppLayout";
 import Head from "next/head";
 import { Form, Input, Checkbox, Button } from 'antd';
 
+export const useInput = (initValue = null) => {
+    const [value,setter] = useState(initValue);
+    const handler = useCallback((e) => {
+        setter(e.target.value);
+    },[]);
+    return [value,handler];
+}
+
 const Signup = () => {
 
     const [passwordCheck, setPasswordCheck] = useState('');
@@ -10,13 +18,7 @@ const Signup = () => {
     const [passwordError, setPasswordError] = useState(false);
     const [termError, setTermError] = useState(false);
 
-    const useInput = (initValue = null) => {
-        const [value,setter] = useState(initValue);
-        const handler = useCallback((e) => {
-            setter(e.target.value);
-        },[]);
-        return [value,handler];
-    }
+
 
     const [id, onChangeId] = useInput('');
     const [nick, onChangeNick] = useInput('');
