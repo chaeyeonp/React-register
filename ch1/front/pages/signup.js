@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import AppLayout from "../components/AppLayout";
-import Head from "next/head";
 import { Form, Input, Checkbox, Button } from 'antd';
 
 export const useInput = (initValue = null) => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import AppLayout from "../components/AppLayout";
-import Head from "next/head";
 import {Button, List, Input, Form, Card} from "antd";
 import Icon from "@ant-design/icons";
 
