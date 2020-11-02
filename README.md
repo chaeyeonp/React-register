@@ -14,14 +14,17 @@ React & Next & Redux & Redux Saga & Express 스택 연습용 Project
 <br><br>
 
 ## 📝 사용언어, 기술스택
-![Generic badge](https://img.shields.io/badge/platform-Web-brightgreen.svg) 
-![Generic badge](https://img.shields.io/badge/library-React-blue.svg)
-![Generic badge](https://img.shields.io/badge/library-Redux-blue.svg)
-![Generic badge](https://img.shields.io/badge/library-ReduxSaga-blue.svg)
-![Generic badge](https://img.shields.io/badge/library-Antd-blue.svg)
-![Generic badge](https://img.shields.io/badge/framework-Next-green.svg)
-![Generic badge](https://img.shields.io/badge/framework-Express-green.svg)
-![Generic badge](https://img.shields.io/badge/language-JavaScript-important.svg)
+
+|BackEnd|FrontEnd|
+|------|---|
+|![Generic badge](https://img.shields.io/badge/framework-Express-green.svg)|![Generic badge](https://img.shields.io/badge/library-React-blue.svg)|
+|![Generic badge](https://img.shields.io/badge/Database-Mysql-red.svg)|![Generic badge](https://img.shields.io/badge/library-Redux-blue.svg)|
+|![Generic badge](https://img.shields.io/badge/ORM-Sequelize-black.svg)|![Generic badge](https://img.shields.io/badge/library-ReduxSaga-blue.svg)|
+|![Generic badge](https://img.shields.io/badge/Middleware-Passport-yellow.svg)|![Generic badge](https://img.shields.io/badge/framework-Next-green.svg)|
+|![Generic badge](https://img.shields.io/badge/Middleware-Multer-yellow.svg)|![Generic badge](https://img.shields.io/badge/framework-StyledComponents-pink.svg)|
+|![Generic badge](https://img.shields.io/badge/library-Socket.io-blue.svg)||
+|![Generic badge](https://img.shields.io/badge/service-Lambda-orange.svg)||
+
 <br><br>
 
 ### 📕 NPM version
