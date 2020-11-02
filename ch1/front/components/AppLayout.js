@@ -15,7 +15,7 @@ const dummy = {
 const AppLayout = ({children}) => {
     return (
         <div>
-            <Menu mode="horizontal">
+            <Menu mode="horizontal" theme="dark" defaultSelectedKeys={['2']}>
                 <Menu.Item key="home"><Link href="/"><a>Home</a></Link></Menu.Item>
                 <Menu.Item key="profile"><Link href="/profile">Profile</Link></Menu.Item>
                 <Menu.Item key="mail">

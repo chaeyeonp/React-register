@@ -1,14 +1,16 @@
 import React from 'react';
 import Icon from "antd/lib/icon";
 import {Avatar, Button, Card} from "antd";
+import CheckOutlined from '@ant-design/icons/CheckOutlined';
 
-const PostCard= () => {
+
+const PostCard= ({post}) => {
     return(
         <Card
-            key={+c.createdAt}
-            cover={c.User.img && <img alt="example" src={c.User.img}/>}
+            key={+post.createdAt}
+            cover={post.User.img && <img alt="example" src={post.User.img}/>}
             actions={[
-                <Icon type="edit" key = "edit"/>,
+                <Icon type="outlined" theme="outlined" />,
                 <Icon type="heart" key="heart"/>,
                 <Icon type="message" key="message"/>,
                 <Icon type="ellipsis" key="ellipsis"/>,
@@ -16,12 +18,23 @@ const PostCard= () => {
             extra={<Button>팔로우</Button>}
         >
             <Card.Meta
-                avatar={<Avatar>{c.User.nickname[0]}</Avatar>}
-                title={c.User.nickname}
-                description={c.User.content}
+                avatar={<Avatar>{post.User.nickname[0]}</Avatar>}
+                title={post.User.nickname}
+                description={post.User.content}
             />
         </Card>
-    )
+    );
+};
+
+PostCard.propTypes = {
+    post: PropTypes.shape({
+        User: PropTypes.object,
+        content: PropTypes.string,
+        img : PropTypes.string,
+        createdAt: PropTypes.object,
+    }),
 }
+
+
 
 export default PostCard;
